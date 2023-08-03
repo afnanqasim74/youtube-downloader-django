@@ -4,10 +4,22 @@
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
     }],
+    
+    "version": 2,
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "djangoProject/wsgi.py"
-        }
+      {
+        "src": "/static/(.*)",
+        "dest": "/djangoProject/static/$1"
+      },
+      {
+        "src": "/media/(.*)",
+        "dest": "/djangoProject/media/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/djangoProject/wsgi.py"
+      }
     ]
+
+
 }
