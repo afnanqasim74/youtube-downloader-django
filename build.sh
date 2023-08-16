@@ -1,4 +1,4 @@
-chmod +x build.sh
+
 pip install asgiref==3.2.10
 pip install certifi==2020.6.20
 pip install dj-database-url==0.5.0
